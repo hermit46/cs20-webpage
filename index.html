@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Yong Quan's Page</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+
+  <body>
+    <h2>Welcome to my page!</h2>
+    <h4>My first name: Yong Quan</h4>
+    <h4>My majors: Comp Sci & International Relations</h4>
+    <h4>My IP address: 130.64.35.17 </h4>
+    <h4>Where I grew up: The sunny island of Singapore</h4>
+    <h4>Something no one would expect about me: I'm planning to do a <a href="https://www.youtube.com/watch?v=sQdDJb4UO-M" target="_blank"> Clutch Flag </a> over the course of this year! </h4>
+
+    <img src = "flag.gif">
+
+    <h4>A picture of my favorite place (Try Hovering on the image!)</h4>
+    <div class = 'images'> <img src = "toapayoh1.jpg"> </div>
+    <h4>This is a picture of Toa Payoh, a small town in Singapore!</h4>
+
+  </body>
+
+  <script>
+  const portfolioItems = document.querySelectorAll('.images');
+
+  portfolioItems.forEach(portfolioItem => {
+    portfolioItem.addEventListener('mouseover', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.add('image-blur');
+    });
+
+    portfolioItem.addEventListener('mouseout', () => {
+      console.log(portfolioItem.childNodes[1].classList)
+      portfolioItem.childNodes[1].classList.remove('image-blur');
+    });
+  });
+
+</script>
+
+</html>
